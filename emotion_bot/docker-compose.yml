@@ -1,0 +1,6 @@
+version: '1'
+services:
+  bot:
+    build: .
+    environment:
+      - BOT_TOKEN=1317861106:AAHKhuX_VI1_ANRApCjyRKUiJarmBm19Ad0
