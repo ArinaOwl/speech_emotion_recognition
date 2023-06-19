@@ -8,7 +8,7 @@
 
 Изменение ЧОТ можно увидеть на спектрограмме. Поэтому для экспериментов была выбрана архитектура [Audio Spectrogram Transformer (AST)](https://huggingface.co/docs/transformers/model_doc/audio-spectrogram-transformer)
 
-![spectrogram](https://github.com/ArinaOwl/speech_emotion_recognition/blob/main/ser_experiments/images/spectrogram.png)
+<img src="https://github.com/ArinaOwl/speech_emotion_recognition/blob/main/ser_experiments/images/spectrogram.png" alt="drawing" width="800"/>
 
 ### Агрегация набора данных Dusha
 
@@ -31,6 +31,9 @@
 
 Для проведения экспериментов были выделены и сохранены признаки аудиозаписей из агрегированного набора:
 - для AST
-![ast_features](https://github.com/ArinaOwl/speech_emotion_recognition/blob/main/ser_experiments/images/ast_features.png)
+
+<img src="https://github.com/ArinaOwl/speech_emotion_recognition/blob/main/ser_experiments/images/ast_features.png" alt="drawing" width="800"/>
+
 - для своей архитектуры
-![f0_features](https://github.com/ArinaOwl/speech_emotion_recognition/blob/main/ser_experiments/images/f0_features.png)
+
+<img src="https://github.com/ArinaOwl/speech_emotion_recognition/blob/main/ser_experiments/images/f0_features.png" alt="drawing" width="800"/>
