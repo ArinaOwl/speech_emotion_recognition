@@ -37,3 +37,5 @@
 - для своей архитектуры
 
 <img src="https://github.com/ArinaOwl/speech_emotion_recognition/blob/main/ser_experiments/images/f0_features.png" alt="drawing" width="800"/>
+
+## Результаты экспериментов
