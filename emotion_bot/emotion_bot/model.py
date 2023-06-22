@@ -202,16 +202,3 @@ class TransformerNet(nn.Module):
         outputs = self.classifier(x[:, 0, :])
         return outputs
 
-
-class EmotionRecognition:
-    def __init__(self):
-        self.feature_extractor = FeatureExtractor(max_length=500)
-        self.model = TransformerNet(4, 48, 4, 500)
-        self.model.eval()
-        self.to_probs = nn.Softmax(dim=0).requires_grad_(False)
-
-    def recognize(self, waveform, sampling_rate):
-        features = self.feature_extractor(waveform, sampling_rate, return_tensors='pt')
-        outputs = self.model(features.input_values.to(torch.float32))
-        probs = self.to_probs(outputs[0])
-        return np.round(probs.detach().numpy() * 100).astype(int)

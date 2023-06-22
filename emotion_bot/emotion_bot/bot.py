@@ -10,7 +10,8 @@ from handlers import router
 
 
 async def main():
-    bot = Bot(token=os.environ.get('BOT_TOKEN'), parse_mode=ParseMode.HTML)
+    #bot = Bot(token=os.environ.get('BOT_TOKEN'), parse_mode=ParseMode.HTML)
+    bot = Bot(token='1317861106:AAHKhuX_VI1_ANRApCjyRKUiJarmBm19Ad0', parse_mode=ParseMode.HTML)
     dp = Dispatcher(storage=MemoryStorage())
     dp.include_router(router)
     await bot.delete_webhook(drop_pending_updates=True)
