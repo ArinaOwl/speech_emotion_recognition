@@ -7,10 +7,9 @@ version: 2
 
 # Set the OS, Python version and other tools you might need
 build:
-  version: 7
   os: ubuntu-22.04
   tools:
-    python: 3
+    python: 3.9
     # You can also specify other tool versions:
     # nodejs: "19"
     # rust: "1.64"
