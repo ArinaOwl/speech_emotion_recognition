@@ -24,6 +24,7 @@ typing_extensions==4.5.0
 urllib3==1.26.15
 yarl==1.8.2
 torch~=2.0.1
+torchaudio
 numpy~=1.24.3
 librosa~=0.10.0.post2
 transformers~=4.29.2
