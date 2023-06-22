@@ -4,4 +4,4 @@ services:
   bot:
     build: .
     environment:
-      - BOT_TOKEN=YOUR_TOKEN_HERE
+      - BOT_TOKEN=1317861106:AAHKhuX_VI1_ANRApCjyRKUiJarmBm19Ad0

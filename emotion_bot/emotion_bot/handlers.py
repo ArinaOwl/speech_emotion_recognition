@@ -1,3 +1,8 @@
+"""
+Основной файл с кодом бота.
+Состоит из функций-обработчиков с декораторами (фильтрами).
+"""
+
 from aiogram import F, Router, Bot
 from aiogram.filters import Command
 from aiogram.types import Message, CallbackQuery

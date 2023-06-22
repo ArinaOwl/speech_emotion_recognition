@@ -18,12 +18,3 @@ EmotionBot - это чат-бот для помощи иностранным с�
    :caption: Contents:
 
    modules
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

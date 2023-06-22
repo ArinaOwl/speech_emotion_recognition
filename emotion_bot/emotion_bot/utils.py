@@ -1,3 +1,7 @@
+"""
+Вспомогательные функции
+"""
+
 import numpy as np
 import torch
 from transformers import AutoFeatureExtractor, ASTForAudioClassification

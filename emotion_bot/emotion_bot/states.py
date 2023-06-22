@@ -1,3 +1,7 @@
+"""
+Вспомогательные классы для FSM (машины состояний)
+"""
+
 from aiogram.fsm.state import StatesGroup, State
 
 

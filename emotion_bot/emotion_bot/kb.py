@@ -1,3 +1,7 @@
+"""
+Все клавиатуры, как статические, так и динамически генерируемые через функции.
+"""
+
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup, KeyboardButton, ReplyKeyboardMarkup
 
 menu = [

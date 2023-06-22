@@ -1,3 +1,7 @@
+"""
+Модели, используемые для предсказания эмоции
+"""
+
 import torch
 import torch.nn as nn
 import numpy as np
