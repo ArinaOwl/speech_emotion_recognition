@@ -21,3 +21,7 @@
 `docker-compose up`
 
 Docker Compose автоматически соберет Docker-образ и запустит контейнер с ботом. Вы увидите вывод логов бота в терминале.
+
+
+
+https://emotionbot.readthedocs.io/
