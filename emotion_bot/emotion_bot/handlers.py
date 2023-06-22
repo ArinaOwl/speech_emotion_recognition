@@ -126,10 +126,12 @@ async def voice_file_sad(msg: Message, bot: Bot):
     await msg.answer(text.wait_feedback)
     audio: io.BytesIO = await bot.download_file(file.file_path)
     y, sr = librosa.load(audio, sr=16000)
-    probs = emotion_recognizer.recognize(y, sr)
-
-    await msg.answer(text.result.format(*probs))
-    await msg.answer(text.ask_continue, reply_markup=kb.continue_kb)
+    if check_voiced(y, sr):
+        probs = emotion_recognizer.recognize(y, sr)
+        await msg.answer(text.result.format(*probs))
+        await msg.answer(text.ask_continue, reply_markup=kb.continue_kb)
+    else:
+        await msg.answer(text.unvoiced)
 
 
 @router.message(Intonation.sad)
@@ -167,10 +169,12 @@ async def voice_file_angry(msg: Message, bot: Bot):
     await msg.answer(text.wait_feedback)
     audio: io.BytesIO = await bot.download_file(file.file_path)
     y, sr = librosa.load(audio, sr=16000)
-    probs = emotion_recognizer.recognize(y, sr)
-
-    await msg.answer(text.result.format(*probs))
-    await msg.answer(text.ask_continue, reply_markup=kb.continue_kb)
+    if check_voiced(y, sr):
+        probs = emotion_recognizer.recognize(y, sr)
+        await msg.answer(text.result.format(*probs))
+        await msg.answer(text.ask_continue, reply_markup=kb.continue_kb)
+    else:
+        await msg.answer(text.unvoiced)
 
 
 @router.message(Intonation.angry)

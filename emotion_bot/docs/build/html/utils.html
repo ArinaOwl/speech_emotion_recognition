@@ -95,17 +95,38 @@
 <dt class="sig sig-object py" id="utils.EmotionRecognition">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">utils.</span></span><span class="sig-name descname"><span class="pre">EmotionRecognition</span></span><a class="headerlink" href="#utils.EmotionRecognition" title="Ссылка на это определение"></a></dt>
 <dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Класс инференса модели.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="utils.EmotionRecognition.recognize">
 <span class="sig-name descname"><span class="pre">recognize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">waveform</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sampling_rate</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.EmotionRecognition.recognize" title="Ссылка на это определение"></a></dt>
-<dd></dd></dl>
+<dd><p>Инференс.</p>
+<dl class="simple">
+<dt>Параметры:</dt><dd><ul class="simple">
+<li><p>waveform (np.ndarray): звуковой временной ряд,</p></li>
+<li><p>sampling_rate (int): частота дискретизации.</p></li>
+</ul>
+</dd>
+<dt>Возвращает:</dt><dd><p>probs (np.ndarray) - вероятности распознавания для каждой эмоции.</p>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="utils.check_voiced">
 <span class="sig-prename descclassname"><span class="pre">utils.</span></span><span class="sig-name descname"><span class="pre">check_voiced</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">waveform</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sampling_rate</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.check_voiced" title="Ссылка на это определение"></a></dt>
-<dd></dd></dl>
+<dd><p>Проверка наличия тоновых звуков в записи.</p>
+<dl class="simple">
+<dt>Параметры:</dt><dd><ul class="simple">
+<li><p>waveform (np.ndarray): звуковой временной ряд,</p></li>
+<li><p>sampling_rate (int): частота дискретизации.</p></li>
+</ul>
+</dd>
+<dt>Возвращает:</dt><dd><p>True, если обнаружен голос, иначе False.</p>
+</dd>
+</dl>
+</dd></dl>
 
 </section>
 

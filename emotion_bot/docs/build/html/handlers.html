@@ -48,10 +48,6 @@
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">emotion_bot</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="bot.html">bot module</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">handlers module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#handlers.angry_other"><code class="docutils literal notranslate"><span class="pre">angry_other()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#handlers.angry_voice_file"><code class="docutils literal notranslate"><span class="pre">angry_voice_file()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#handlers.happy_other"><code class="docutils literal notranslate"><span class="pre">happy_other()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#handlers.happy_voice_file"><code class="docutils literal notranslate"><span class="pre">happy_voice_file()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#handlers.help_handler"><code class="docutils literal notranslate"><span class="pre">help_handler()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#handlers.input_angry"><code class="docutils literal notranslate"><span class="pre">input_angry()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#handlers.input_happy"><code class="docutils literal notranslate"><span class="pre">input_happy()</span></code></a></li>
@@ -61,9 +57,13 @@
 <li class="toctree-l3"><a class="reference internal" href="#handlers.next_phrase_angry"><code class="docutils literal notranslate"><span class="pre">next_phrase_angry()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#handlers.next_phrase_happy"><code class="docutils literal notranslate"><span class="pre">next_phrase_happy()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#handlers.next_phrase_sad"><code class="docutils literal notranslate"><span class="pre">next_phrase_sad()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#handlers.sad_other"><code class="docutils literal notranslate"><span class="pre">sad_other()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#handlers.sad_voice_file"><code class="docutils literal notranslate"><span class="pre">sad_voice_file()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#handlers.other_angry"><code class="docutils literal notranslate"><span class="pre">other_angry()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#handlers.other_happy"><code class="docutils literal notranslate"><span class="pre">other_happy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#handlers.other_sad"><code class="docutils literal notranslate"><span class="pre">other_sad()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#handlers.start_handler"><code class="docutils literal notranslate"><span class="pre">start_handler()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#handlers.voice_file_angry"><code class="docutils literal notranslate"><span class="pre">voice_file_angry()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#handlers.voice_file_happy"><code class="docutils literal notranslate"><span class="pre">voice_file_happy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#handlers.voice_file_sad"><code class="docutils literal notranslate"><span class="pre">voice_file_sad()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="kb.html">kb module</a></li>
@@ -105,84 +105,118 @@
 <p>Основной файл с кодом бота.
 Состоит из функций-обработчиков с декораторами (фильтрами).</p>
 <dl class="py function">
-<dt class="sig sig-object py" id="handlers.angry_other">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">handlers.</span></span><span class="sig-name descname"><span class="pre">angry_other</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#handlers.angry_other" title="Ссылка на это определение"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="handlers.angry_voice_file">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">handlers.</span></span><span class="sig-name descname"><span class="pre">angry_voice_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Bot</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#handlers.angry_voice_file" title="Ссылка на это определение"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="handlers.happy_other">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">handlers.</span></span><span class="sig-name descname"><span class="pre">happy_other</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#handlers.happy_other" title="Ссылка на это определение"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="handlers.happy_voice_file">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">handlers.</span></span><span class="sig-name descname"><span class="pre">happy_voice_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Bot</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#handlers.happy_voice_file" title="Ссылка на это определение"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
 <dt class="sig sig-object py" id="handlers.help_handler">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">handlers.</span></span><span class="sig-name descname"><span class="pre">help_handler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#handlers.help_handler" title="Ссылка на это определение"></a></dt>
-<dd></dd></dl>
+<dd><p>Обработчик команды help или голосового сообщения вне тренировки</p>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="handlers.input_angry">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">handlers.</span></span><span class="sig-name descname"><span class="pre">input_angry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clbck</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">CallbackQuery</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">FSMContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#handlers.input_angry" title="Ссылка на это определение"></a></dt>
-<dd></dd></dl>
+<dd><p>Переход в режим тренировки эмоции „Злость“</p>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="handlers.input_happy">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">handlers.</span></span><span class="sig-name descname"><span class="pre">input_happy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clbck</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">CallbackQuery</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">FSMContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#handlers.input_happy" title="Ссылка на это определение"></a></dt>
-<dd></dd></dl>
+<dd><p>Переход в режим тренировки эмоции „Радость“</p>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="handlers.input_sad">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">handlers.</span></span><span class="sig-name descname"><span class="pre">input_sad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clbck</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">CallbackQuery</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">FSMContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#handlers.input_sad" title="Ссылка на это определение"></a></dt>
-<dd></dd></dl>
+<dd><p>Переход в режим тренировки эмоции „Грусть“</p>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="handlers.menu">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">handlers.</span></span><span class="sig-name descname"><span class="pre">menu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">FSMContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#handlers.menu" title="Ссылка на это определение"></a></dt>
-<dd></dd></dl>
+<dd><p>Обработчик текстовой команды „Меню“</p>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="handlers.menu_help_handler">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">handlers.</span></span><span class="sig-name descname"><span class="pre">menu_help_handler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clbck</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">CallbackQuery</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#handlers.menu_help_handler" title="Ссылка на это определение"></a></dt>
-<dd></dd></dl>
+<dd><p>Обработчик команды „Помощь“ (кнопка интерактивной клавиатуры)</p>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="handlers.next_phrase_angry">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">handlers.</span></span><span class="sig-name descname"><span class="pre">next_phrase_angry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clbck</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">CallbackQuery</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#handlers.next_phrase_angry" title="Ссылка на это определение"></a></dt>
-<dd></dd></dl>
+<dd><p>Выдача следующей случайной фразы из модуля text в режиме „Злость“</p>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="handlers.next_phrase_happy">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">handlers.</span></span><span class="sig-name descname"><span class="pre">next_phrase_happy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clbck</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">CallbackQuery</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#handlers.next_phrase_happy" title="Ссылка на это определение"></a></dt>
-<dd></dd></dl>
+<dd><p>Выдача следующей случайной фразы из text.phrases в режиме „Радость“</p>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="handlers.next_phrase_sad">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">handlers.</span></span><span class="sig-name descname"><span class="pre">next_phrase_sad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clbck</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">CallbackQuery</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#handlers.next_phrase_sad" title="Ссылка на это определение"></a></dt>
-<dd></dd></dl>
+<dd><p>Выдача следующей случайной фразы из модуля text в режиме „Грусть“</p>
+</dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="handlers.sad_other">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">handlers.</span></span><span class="sig-name descname"><span class="pre">sad_other</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#handlers.sad_other" title="Ссылка на это определение"></a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object py" id="handlers.other_angry">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">handlers.</span></span><span class="sig-name descname"><span class="pre">other_angry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#handlers.other_angry" title="Ссылка на это определение"></a></dt>
+<dd><p>Обработчик прочих сообщений в режиме „Злость“.</p>
+<p>Выдает инструкцию по тренировке.</p>
+</dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="handlers.sad_voice_file">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">handlers.</span></span><span class="sig-name descname"><span class="pre">sad_voice_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Bot</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#handlers.sad_voice_file" title="Ссылка на это определение"></a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object py" id="handlers.other_happy">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">handlers.</span></span><span class="sig-name descname"><span class="pre">other_happy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#handlers.other_happy" title="Ссылка на это определение"></a></dt>
+<dd><p>Обработчик прочих сообщений в режиме „Радость“.</p>
+<p>Выдает инструкцию по тренировке.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="handlers.other_sad">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">handlers.</span></span><span class="sig-name descname"><span class="pre">other_sad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#handlers.other_sad" title="Ссылка на это определение"></a></dt>
+<dd><p>Обработчик прочих сообщений в режиме „Грусть“.</p>
+<p>Выдает инструкцию по тренировке.</p>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="handlers.start_handler">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">handlers.</span></span><span class="sig-name descname"><span class="pre">start_handler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">FSMContext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#handlers.start_handler" title="Ссылка на это определение"></a></dt>
-<dd></dd></dl>
+<dd><p>Обработчик команды start</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="handlers.voice_file_angry">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">handlers.</span></span><span class="sig-name descname"><span class="pre">voice_file_angry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Bot</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#handlers.voice_file_angry" title="Ссылка на это определение"></a></dt>
+<dd><p>Обработка голосового сообщения в режиме „Злость“:</p>
+<ol class="arabic simple">
+<li><p>Проверка наличия тоновых звуков в записи,</p></li>
+<li><p>Определение вероятностей для каждой эмоции,</p></li>
+<li><p>Выдача результата пользователю</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="handlers.voice_file_happy">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">handlers.</span></span><span class="sig-name descname"><span class="pre">voice_file_happy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Bot</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#handlers.voice_file_happy" title="Ссылка на это определение"></a></dt>
+<dd><p>Обработка голосового сообщения в режиме „Радость“:</p>
+<ol class="arabic simple">
+<li><p>Проверка наличия тоновых звуков в записи,</p></li>
+<li><p>Определение вероятностей для каждой эмоции,</p></li>
+<li><p>Выдача результата пользователю</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="handlers.voice_file_sad">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">handlers.</span></span><span class="sig-name descname"><span class="pre">voice_file_sad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Bot</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#handlers.voice_file_sad" title="Ссылка на это определение"></a></dt>
+<dd><p>Обработка голосового сообщения в режиме „Грусть“:</p>
+<ol class="arabic simple">
+<li><p>Проверка наличия тоновых звуков в записи,</p></li>
+<li><p>Определение вероятностей для каждой эмоции,</p></li>
+<li><p>Выдача результата пользователю</p></li>
+</ol>
+</dd></dl>
 
 </section>
 
