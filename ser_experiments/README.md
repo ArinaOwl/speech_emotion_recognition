@@ -8,7 +8,7 @@
 
 Изменение ЧОТ можно увидеть на спектрограмме. Поэтому для экспериментов была выбрана архитектура [Audio Spectrogram Transformer (AST)](https://huggingface.co/docs/transformers/model_doc/audio-spectrogram-transformer)
 
-<img src="https://github.com/ArinaOwl/speech_emotion_recognition/blob/main/ser_experiments/images/spectrogram.png" alt="drawing" width="800"/>
+<img src="https://github.com/ArinaOwl/speech_emotion_recognition/blob/master/ser_experiments/images/spectrogram.png" alt="drawing" width="800"/>
 
 ### Агрегация набора данных Dusha
 
@@ -19,9 +19,11 @@
 - Crowd - собраны с помощью краудсорсинга;
 - Podcast - короткие нарезки русскоязычных подкастов.
 
-В каждой из категорий данные разделены на тренировочную и тестовую выборки так, чтобы одинаковые дикторы или подкасты не попали в обе выборки. Такое разделение позволяет валидировать и оценивать модели на новых данных, что уменьшает шанс влияния уникальных характеристик голоса человека на классификацию эмоции.
+Выборка Crowd подходит под задачу бота, определяющего эмоции в голосовых сообщениях, так как дикторы специально записывали подготовленные фразы.
 
-Алгоритм агрегации данных подробно описан в [ноутбуке](https://github.com/ArinaOwl/speech_emotion_recognition/blob/main/ser_experiments/data_processing.ipynb). В итоговую выборку вошли аудиозаписи, для которых:
+Данные в категории Crowd разделены на тренировочную и тестовую выборки так, чтобы одинаковые дикторы или подкасты не попали в обе выборки.
+
+Алгоритм агрегации данных подробно описан в [ноутбуке](https://github.com/ArinaOwl/speech_emotion_recognition/blob/master/ser_experiments/data_processing.ipynb). В итоговую выборку вошли аудиозаписи, для которых:
 - не менее 5 разметчиков,
 - длительность не более 10 секунд,
 - эмоция определяется большинством голосов разметчиков,
@@ -32,10 +34,10 @@
 Для проведения экспериментов были выделены и сохранены признаки аудиозаписей из агрегированного набора:
 - для AST
 
-<img src="https://github.com/ArinaOwl/speech_emotion_recognition/blob/main/ser_experiments/images/ast_features.png" alt="drawing" width="800"/>
+<img src="https://github.com/ArinaOwl/speech_emotion_recognition/blob/master/ser_experiments/images/ast_features.png" alt="drawing" width="800"/>
 
 - для своей архитектуры
 
-<img src="https://github.com/ArinaOwl/speech_emotion_recognition/blob/main/ser_experiments/images/f0_features.png" alt="drawing" width="800"/>
+<img src="https://github.com/ArinaOwl/speech_emotion_recognition/blob/master/ser_experiments/images/f0_features.png" alt="drawing" width="800"/>
 
 ## Отчет о проведенных экспериментах
