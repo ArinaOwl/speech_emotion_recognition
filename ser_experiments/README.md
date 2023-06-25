@@ -42,6 +42,10 @@
 
 ## Отчет о проведенных экспериментах
 
+Проведенные эксперименты подробно описаны в [ноутбуке](https://github.com/ArinaOwl/speech_emotion_recognition/blob/master/ser_experiments/emo_classification_pretrained.ipynb).
+
+Итоговые показатели выбранной при проведении экспериментов модели:
+
 |	          | macro_average |	positive |	sad   |	angry |	neutral |
 |:---       | ---:          | ---:     | ---:   | ---:  | ---:    |
 | accuracy  |	0.669         |	0.637    |	0.671 |	0.686 |	0.683   |
