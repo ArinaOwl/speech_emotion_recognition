@@ -11,11 +11,8 @@ import librosa
 class EmotionRecognition:
     """Класс инференса модели."""
     def __init__(self):
-        self.feature_extractor = AutoFeatureExtractor.from_pretrained("MIT/ast-finetuned-audioset-10-10-0.4593")
-        self.model = ASTForAudioClassification.from_pretrained("MIT/ast-finetuned-audioset-10-10-0.4593",
-                                                               num_labels=4, return_dict=False,
-                                                               ignore_mismatched_sizes=True)
-        #self.model.load_state_dict(torch.load('ast_model_weights.pth'))
+        self.feature_extractor = AutoFeatureExtractor.from_pretrained("ArinaOwl/ast-ser-ru")
+        self.model = ASTForAudioClassification.from_pretrained("ArinaOwl/ast-ser-ru")
         self.model.eval()
         self.to_probs = torch.nn.Softmax(dim=0).requires_grad_(False)
 
